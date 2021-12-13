@@ -1,0 +1,21 @@
+The requirements:
+I'll send an excel table with the names of the ranks, their cost and what the rankup entails permission wise.
+The basics are that when a player uses the command /ranks, a GUI pops up with the available ranks. The default permission group (permission group and rank are interchangeable concepts for the purpose of the plugin) is called "default", and is where every player starts. When a default player uses /ranks, he can only interact with the first rank, "Member", and all the subsequent ones say something like "You need rank x first" or whatever. So when they hover over the first rank it says "Member Rank. Cost $xyz. What it adds to your permissions"
+Regarding the actual permission groups in the LuckPerms plugin, they'll be called exactly the same as the rank name, all lowercaps (ie. member, default, soldier, etc.) and I'll take care of those.
+Preferably, a confirmation GUI (basic green panes on one side, red ones on the other asking for confirmation on the purchase of the rank)
+
+This last one is a personal preference, and if you think it's a bit too much, feel free to ignore. I'd love it if, in the code, you could add a little wirtten note that says what that portion of the code means and does. That's just for me to understand the code and learn from it and you.
+I am pretty much always available through here, and I'll await any comment you have, any question or whatever you need.
+Also, you have creative freedom if you feel like something might work better in another way. Just let me know if I can be of any use.
+
+asperienranks.emperor
+asperienranks.shogun
+asperienranks.daimyo
+asperienranks.samurai
+asperienranks.ronin
+asperienranks.liege
+asperienranks.elite
+asperienranks.soldier
+asperienranks.merchant
+asperienranks.member
+asperienranks.default

@@ -1,0 +1,48 @@
+name: AsperienRanks
+version: '${project.version}'
+main: asperienranks.asperienranks.AsperienRanks
+api-version: 1.18
+depend: [ Vault ]
+authors: [ Lagggpixel ]
+description: AsperienRanks
+permission:
+  asperienranks.*:
+    description: All other permmisions
+    children:
+      - asperienranks.master
+  asperienranks.master:
+    description: Grants you all of the other ranks.
+    children:
+      - asperienranks.emperor
+      - asperienranks.shogun
+      - asperienranks.daimyo
+      - asperienranks.samurai
+      - asperienranks.ronin
+      - asperienranks.liege
+      - asperienranks.elite
+      - asperienranks.soldier
+      - asperienranks.merchant
+      - asperienranks.member
+      - asperienranks.default
+  asperienranks.emperor:
+    description:
+  asperienranks.shogun:
+    description:
+  asperienranks.daimyo:
+    description:
+  asperienranks.samurai:
+    description:
+  asperienranks.ronin:
+    description:
+  asperienranks.liege:
+    description:
+  asperienranks.elite:
+    description:
+  asperienranks.soldier:
+    description:
+  asperienranks.merchant:
+    description:
+  asperienranks.member:
+    description:
+  asperienranks.default:
+    description:
