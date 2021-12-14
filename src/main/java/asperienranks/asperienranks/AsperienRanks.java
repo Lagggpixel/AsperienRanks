@@ -10,7 +10,10 @@ public final class AsperienRanks extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        System.out.println("AsperienRanks has been enabled.");
+
         RegisterCommands();
+        RegisterEvents();
     }
 
     @Override

@@ -10,7 +10,7 @@ public class RankManager implements Listener {
         openGUI.SetupGUI(player);
     }
 
-    public static Boolean hasRank(Player player, String rank) {
+    public static boolean hasRank(Player player, String rank) {
         String perm = "asperienranks." + rank;
         return player.hasPermission(perm);
     }
@@ -37,6 +37,43 @@ public class RankManager implements Listener {
             RankString = "Merchant";
         } else if (player.hasPermission("asperienranks.member")) {
             RankString = "Member";
+        }
+        return RankString;
+    }
+
+    public static String RankName(String rank) {
+        String RankString = null;
+        switch (rank) {
+            case "emperor":
+                RankString = "Emperor";
+                break;
+            case "shogun":
+                RankString = "Shogun";
+                break;
+            case "daimyo":
+                RankString = "Daimyo";
+                break;
+            case "samurai":
+                RankString = "Samurai";
+                break;
+            case "ronin":
+                RankString = "Ronin";
+                break;
+            case "liege":
+                RankString = "Liege";
+                break;
+            case "elite":
+                RankString = "Elite";
+                break;
+            case "soldier":
+                RankString = "Soldier";
+                break;
+            case "merchant":
+                RankString = "Merchant";
+                break;
+            case "member":
+                RankString = "Member";
+                break;
         }
         return RankString;
     }
