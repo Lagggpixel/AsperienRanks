@@ -9,7 +9,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class openGUI implements Listener {
     public static void SetupGUI(Player player) {
-        Inventory gui = Bukkit.createInventory(player, 36, ChatColor.YELLOW + "Rank");
+        Inventory gui = Bukkit.createInventory(player, 36, ChatColor.LIGHT_PINK + "" + ChatColor.BOLD + "Asperien Ranks");
 
         ItemStack placeholder = ItemStackManager.PlaceHolder();
         ItemStack currentRank = ItemStackManager.CurrentRank(player);
