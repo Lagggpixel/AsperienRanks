@@ -14,6 +14,7 @@ public class openGUI implements Listener {
         ItemStack placeholder = ItemStackManager.PlaceHolder();
         ItemStack currentRank = ItemStackManager.CurrentRank(player);
 
+        ItemStack MemberRank = ItemStackManager.RankPaper(player, "member");
         ItemStack MerchantRank = ItemStackManager.RankPaper(player, "merchant");
         ItemStack SoldierRank = ItemStackManager.RankPaper(player, "soldier");
         ItemStack EliteRank = ItemStackManager.RankPaper(player,"elite");
@@ -29,8 +30,8 @@ public class openGUI implements Listener {
 
         ItemStack[] menu_items = {
                 placeholder, placeholder, placeholder, placeholder, currentRank, placeholder, placeholder, placeholder, placeholder,
-                placeholder, MerchantRank, SoldierRank, EliteRank, LiegeRank, RoninRank, SamuraiRank, DaimyoRank, placeholder,
-                placeholder, ShogunRank, EmperorRank, Air, Air, Air, Air, Air, placeholder,
+                placeholder, MemberRank, MerchantRank, SoldierRank, EliteRank, LiegeRank, RoninRank, SamuraiRank, placeholder,
+                placeholder, DaimyoRank, ShogunRank, EmperorRank, Air, Air, Air, Air, placeholder,
                 placeholder, placeholder, placeholder, placeholder, UpgradeRank, placeholder, placeholder, placeholder, placeholder
         };
 

@@ -84,9 +84,88 @@ public class ItemStackManager implements Listener {
         ArrayList<String> CurrentRankLore = new ArrayList<>();
         if (RankManager.hasRank(player, RankString)) {
             CurrentRankMeta.setDisplayName(ChatColor.GREEN + RankManager.RankName(RankString));
-        } else {
+        }
+        else {
             CurrentRankMeta.setDisplayName(ChatColor.AQUA + RankManager.RankName(RankString));
         }
+
+        switch (RankString) {
+            case "emperor":
+                CurrentRankLore.add(" - Everything in shogun");
+                CurrentRankLore.add(" - 8 Homes");
+                CurrentRankLore.add(" - 5 slots on ah");
+                CurrentRankLore.add(" - 6 Rows of backpack");
+                CurrentRankLore.add(" - Access to /fly");
+                CurrentRankLore.add(" - Access to /nick(colours)");
+                break;
+            case "shogun":
+                CurrentRankLore.add(" - Everything in daimyo");
+                CurrentRankLore.add(" - Access to 4 slots of ah");
+                CurrentRankLore.add(" - Access to 5 Rows of backpack");
+                CurrentRankLore.add(" - Access to 4 jobs");
+                CurrentRankLore.add(" - Access to /ptime");
+                CurrentRankLore.add(" - Access to /speed");
+                break;
+            case "daimyo":
+                CurrentRankLore.add(" - Everything in samurai");
+                CurrentRankLore.add(" - Access to 7 homes");
+                CurrentRankLore.add(" - Access to 4 rows of backpack");
+                CurrentRankLore.add(" - Access to reusable Safari Nets");
+                CurrentRankLore.add(" - Access to /tfly");
+                break;
+            case "samurai":
+                CurrentRankLore.add(" - Everything in ronin");
+                CurrentRankLore.add(" - Access to /condense");
+                CurrentRankLore.add(" - Access to /nick(colourless)");
+                CurrentRankLore.add(" - Access to /pweather");
+                CurrentRankLore.add(" - Access to /back on death");
+                CurrentRankLore.add(" - Access to /magnet");
+                break;
+            case "ronin":
+                CurrentRankLore.add(" - Everything in liege");
+                CurrentRankLore.add(" - Access to 6 homes");
+                CurrentRankLore.add(" - Access to 3 jobs");
+                CurrentRankLore.add(" - Access to 3 slots on auction house");
+                CurrentRankLore.add(" - Access to 3 rows of backpack");
+                CurrentRankLore.add(" - Access to /craft");
+                break;
+            case "liege":
+                CurrentRankLore.add(" - Everything in elite");
+                CurrentRankLore.add(" - Access to 5 homes");
+                CurrentRankLore.add(" - Access to 2 player warps");
+                CurrentRankLore.add(" - Access to /enderchest");
+                CurrentRankLore.add(" - Break spawners with silktouch");
+                break;
+            case "elite":
+                CurrentRankLore.add(" - Everything in soldier");
+                CurrentRankLore.add(" - Access to 4 homes");
+                CurrentRankLore.add(" - Access to 2 rows of backpack");
+                CurrentRankLore.add(" - Access to 2 slots on auction house");
+                CurrentRankLore.add(" - Access to single use Safari Nets");
+                CurrentRankLore.add(" - Access to xp bottler");
+                CurrentRankLore.add(" - Access to /heads");
+                break;
+            case "soldier":
+                CurrentRankLore.add(" - Everything in merchant");
+                CurrentRankLore.add(" - Access to 3 homes");
+                CurrentRankLore.add(" - Access to 2 jobs");
+                CurrentRankLore.add(" - Access to /back");
+                CurrentRankLore.add(" - Access to make a town");
+                break;
+            case "merchant":
+                CurrentRankLore.add(" - Everything in member");
+                CurrentRankLore.add(" - Access to /trash");
+                CurrentRankLore.add(" - Access to 1 row of backpack");
+                CurrentRankLore.add(" - Access to 1 player warp");
+                break;
+            case "member":
+                CurrentRankLore.add(" - Access to 2 homes");
+                CurrentRankLore.add(" - Access to 1 slot on auction house");
+                break;
+        }
+
+        CurrentRankMeta.setLore(CurrentRankLore);
+
         CurrentRank.setItemMeta(CurrentRankMeta);
 
         return CurrentRank;
@@ -116,52 +195,52 @@ public class ItemStackManager implements Listener {
         else if (player.hasPermission("asperienranks.shogun")) {
             assert UpgradeRankMeta != null;
             UpgradeRankMeta.setDisplayName("Upgrade to " + ChatColor.BLUE + "Emperor" + ChatColor.RESET + " Rank");
-            UpgradeRankLore.add(ChatColor.AQUA + "Cost: " + ChatColor.LIGHT_PURPLE + "40000000");
+            UpgradeRankLore.add(ChatColor.AQUA + "Cost: " + ChatColor.LIGHT_PURPLE + "$40000000");
         }
         else if (player.hasPermission("asperienranks.daimyo")) {
             assert UpgradeRankMeta != null;
             UpgradeRankMeta.setDisplayName("Upgrade to " + ChatColor.BLUE + "Shogun" + ChatColor.RESET + " Rank");
-            UpgradeRankLore.add(ChatColor.AQUA + "Cost: " + ChatColor.LIGHT_PURPLE + "25000000");
+            UpgradeRankLore.add(ChatColor.AQUA + "Cost: " + ChatColor.LIGHT_PURPLE + "$25000000");
         }
         else if (player.hasPermission("asperienranks.samurai")) {
             assert UpgradeRankMeta != null;
             UpgradeRankMeta.setDisplayName("Upgrade to " + ChatColor.BLUE + "Daimyo" + ChatColor.RESET + " Rank");
-            UpgradeRankLore.add(ChatColor.AQUA + "Cost: " + ChatColor.LIGHT_PURPLE + "10000000");
+            UpgradeRankLore.add(ChatColor.AQUA + "Cost: " + ChatColor.LIGHT_PURPLE + "$10000000");
         }
         else if (player.hasPermission("asperienranks.ronin")) {
             assert UpgradeRankMeta != null;
             UpgradeRankMeta.setDisplayName("Upgrade to " + ChatColor.BLUE + "Samurai" + ChatColor.RESET + " Rank");
-            UpgradeRankLore.add(ChatColor.AQUA + "Cost: " + ChatColor.LIGHT_PURPLE + "3000000");
+            UpgradeRankLore.add(ChatColor.AQUA + "Cost: " + ChatColor.LIGHT_PURPLE + "$3000000");
         }
         else if (player.hasPermission("asperienranks.liege")) {
             assert UpgradeRankMeta != null;
             UpgradeRankMeta.setDisplayName("Upgrade to " + ChatColor.BLUE + "Ronin" + ChatColor.RESET + " Rank");
-            UpgradeRankLore.add(ChatColor.AQUA + "Cost: " + ChatColor.LIGHT_PURPLE + "1500000");
+            UpgradeRankLore.add(ChatColor.AQUA + "Cost: " + ChatColor.LIGHT_PURPLE + "$1500000");
         }
         else if (player.hasPermission("asperienranks.elite")) {
             assert UpgradeRankMeta != null;
             UpgradeRankMeta.setDisplayName("Upgrade to " + ChatColor.BLUE + "Liege" + ChatColor.RESET + " Rank");
-            UpgradeRankLore.add(ChatColor.AQUA + "Cost: " + ChatColor.LIGHT_PURPLE + "750000");
+            UpgradeRankLore.add(ChatColor.AQUA + "Cost: " + ChatColor.LIGHT_PURPLE + "$750000");
         }
         else if (player.hasPermission("asperienranks.soldier")) {
             assert UpgradeRankMeta != null;
             UpgradeRankMeta.setDisplayName("Upgrade to " + ChatColor.BLUE + "Elite" + ChatColor.RESET + " Rank");
-            UpgradeRankLore.add(ChatColor.AQUA + "Cost: " + ChatColor.LIGHT_PURPLE + "250000");
+            UpgradeRankLore.add(ChatColor.AQUA + "Cost: " + ChatColor.LIGHT_PURPLE + "$250000");
         }
         else if (player.hasPermission("asperienranks.merchant")) {
             assert UpgradeRankMeta != null;
             UpgradeRankMeta.setDisplayName("Upgrade to " + ChatColor.BLUE + "Soldier" + ChatColor.RESET + " Rank");
-            UpgradeRankLore.add(ChatColor.AQUA + "Cost: " + ChatColor.LIGHT_PURPLE + "75000");
+            UpgradeRankLore.add(ChatColor.AQUA + "Cost: " + ChatColor.LIGHT_PURPLE + "$75000");
         }
         else if (player.hasPermission("asperienranks.member")) {
             assert UpgradeRankMeta != null;
             UpgradeRankMeta.setDisplayName("Upgrade to " + ChatColor.BLUE + "Merchant" + ChatColor.RESET + " Rank");
-            UpgradeRankLore.add(ChatColor.AQUA + "Cost: " + ChatColor.LIGHT_PURPLE + "25000");
+            UpgradeRankLore.add(ChatColor.AQUA + "Cost: " + ChatColor.LIGHT_PURPLE + "$25000");
         }
         else if (player.hasPermission("asperienranks.default")) {
             assert UpgradeRankMeta != null;
             UpgradeRankMeta.setDisplayName("Upgrade to " + ChatColor.BLUE + "Member" + ChatColor.RESET + " Rank");
-            UpgradeRankLore.add(ChatColor.AQUA + "Cost: " + ChatColor.LIGHT_PURPLE + "5000");
+            UpgradeRankLore.add(ChatColor.AQUA + "Cost: " + ChatColor.LIGHT_PURPLE + "$5000");
         }
 
         assert UpgradeRankMeta != null;

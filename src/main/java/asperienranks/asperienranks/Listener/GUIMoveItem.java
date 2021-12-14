@@ -17,9 +17,8 @@ public class GUIMoveItem implements Listener {
     @EventHandler
     public void clickEvent(InventoryClickEvent event) {
         Player player = (Player) event.getWhoClicked();
-        if(event.getView().getTitle().equalsIgnoreCase(ChatColor.YELLOW + "Rank")){
+        if(event.getView().getTitle().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Asperien Ranks")){
             event.setCancelled(true);
         }
-
     }
 }
