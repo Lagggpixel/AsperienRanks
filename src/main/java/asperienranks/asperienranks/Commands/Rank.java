@@ -15,14 +15,7 @@ public class Rank implements CommandExecutor {
         if (CMDSender instanceof Player) {
             //Casts the command sender into player
             Player player = (Player) CMDSender;
-
-            if (strings.length != 0) {
-                player.sendMessage(ChatColor.RED + "You gave too many arguments, do " + ChatColor.WHITE + "/rank");
-            } else {
-                RankManager.CheckRank(player);
-            }
-
-
+            RankManager.CheckRank(player);
         } else {
             //Sends a message in console
             System.out.println("You can not use this command, this command is only used by players.");

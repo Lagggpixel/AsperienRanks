@@ -1,0 +1,6 @@
+asperienranks\asperienranks\GUIManagers\ItemStackManager.class
+asperienranks\asperienranks\GUIManagers\openGUI.class
+asperienranks\asperienranks\Manager\RankManager.class
+asperienranks\asperienranks\AsperienRanks.class
+asperienranks\asperienranks\Commands\Rank.class
+asperienranks\asperienranks\Listener\GUIMoveItem.class

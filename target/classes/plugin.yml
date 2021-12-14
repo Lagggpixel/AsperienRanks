@@ -1,5 +1,5 @@
 name: AsperienRanks
-version: '${project.version}'
+version: '1.0'
 main: asperienranks.asperienranks.AsperienRanks
 api-version: 1.17
 depend: [ Vault ]
