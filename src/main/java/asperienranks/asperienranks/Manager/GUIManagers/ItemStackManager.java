@@ -1,9 +1,10 @@
-package asperienranks.asperienranks.GUIManagers;
+package asperienranks.asperienranks.Manager.GUIManagers;
 
 import asperienranks.asperienranks.Manager.RankManager;
 import net.milkbowl.vault.chat.Chat;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemFlag;
@@ -248,5 +249,41 @@ public class ItemStackManager implements Listener {
         UpgradeRank.setItemMeta(UpgradeRankMeta);
 
         return UpgradeRank;
+    }
+
+    public static ItemStack GreenWool() {
+        ItemStack GreenWool = new ItemStack(Material.GREEN_WOOL);
+        ItemMeta GreenWoolMeta = GreenWool.getItemMeta();
+
+        assert GreenWoolMeta != null;
+        GreenWoolMeta.setDisplayName(ChatColor.GREEN + "Yes");
+
+        GreenWool.setItemMeta(GreenWoolMeta);
+
+        return GreenWool;
+    }
+
+    public static ItemStack RedWool() {
+        ItemStack RedWool = new ItemStack(Material.RED_WOOL);
+        ItemMeta RedWoolMeta = RedWool.getItemMeta();
+
+        assert RedWoolMeta != null;
+        RedWoolMeta.setDisplayName(ChatColor.RED + "No");
+
+        RedWool.setItemMeta(RedWoolMeta);
+
+        return RedWool;
+    }
+
+    public static ItemStack WhiteConfirmationWool () {
+        ItemStack WhiteWool = new ItemStack(Material.WHITE_WOOL);
+        ItemMeta WhiteWoolMeta = WhiteWool.getItemMeta();
+
+        assert WhiteWoolMeta != null;
+        WhiteWoolMeta.setDisplayName(ChatColor.GREEN + "Yes " + ChatColor.RESET + "or" + ChatColor.RED + " No");
+
+        WhiteWool.setItemMeta(WhiteWoolMeta);
+
+        return WhiteWool;
     }
 }

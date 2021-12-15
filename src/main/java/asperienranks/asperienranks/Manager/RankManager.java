@@ -1,13 +1,13 @@
 package asperienranks.asperienranks.Manager;
 
-import asperienranks.asperienranks.GUIManagers.openGUI;
+import asperienranks.asperienranks.Manager.GUIManagers.GUIManager;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 
 public class RankManager implements Listener {
 
     public static void CheckRank(Player player) {
-        openGUI.SetupGUI(player);
+        GUIManager.RankUpGUI(player);
     }
 
     public static boolean hasRank(Player player, String rank) {
@@ -37,6 +37,8 @@ public class RankManager implements Listener {
             RankString = "Merchant";
         } else if (player.hasPermission("asperienranks.member")) {
             RankString = "Member";
+        } else {
+            RankString = "Default";
         }
         return RankString;
     }

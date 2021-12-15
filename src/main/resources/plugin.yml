@@ -2,18 +2,46 @@ name: AsperienRanks
 version: '${project.version}'
 main: asperienranks.asperienranks.AsperienRanks
 api-version: 1.17
-depend: [ Vault ]
+load: STARTUP
+depend: [ Vault, Essentials ]
 authors: [ Lagggpixel ]
 description: AsperienRanks
 commands:
   rank:
     description: Opens a gui allowing you to rankup.
     usage: /rank
+    permission: asperienranks.default
+    permission-message: You don't have premission to do this, please relog or contact a server admin
+  rankup:
+    description: Ranks up
+    usage: /rankup
+    permission: asperienranks.default
+    permission-message: You don't have premission to do this, please relog or contact a server admin
+  forcerankup:
+    description: Forces the rankup of a player(does not use their money)
+    usage: /forcerankup [player]
+    permission: asperienranks.forcerankup
+    permission-message: You can't do this!
+    alisas: [frankup]
+  info:
+    description: Checks the player's information
+    usage: /info [player]
+    permission: asperienranks.info
+    permission-message: You can't do this!
+    aliases: [i]
 permissions:
   asperienranks.*:
     description: All other permmisions
     children:
       - asperienranks.master
+      - asperienranks.forcerankup
+    default: false
+  asperienranks.forcerankup:
+    description: Allows your player to force a rankup
+    default: op
+  asperienranks.info:
+    description: Allows the player to see others' info
+    default: op
   asperienranks.master:
     description: Grants you all of the other ranks.
     children:
@@ -28,6 +56,7 @@ permissions:
       - asperienranks.merchant
       - asperienranks.member
       - asperienranks.default
+    default: false
   asperienranks.emperor:
     children: [asperienranks.shogun]
     default: false

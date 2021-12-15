@@ -1,6 +1,13 @@
-asperienranks\asperienranks\GUIManagers\ItemStackManager.class
-asperienranks\asperienranks\GUIManagers\openGUI.class
+asperienranks\asperienranks\Listener\OnJoin.class
+asperienranks\asperienranks\Manager\GUIManagers\GUIManager.class
+asperienranks\asperienranks\Manager\GUIManagers\ItemStackManager.class
 asperienranks\asperienranks\Manager\RankManager.class
+asperienranks\asperienranks\Manager\EconomyManager.class
+asperienranks\asperienranks\Manager\RankupManager.class
 asperienranks\asperienranks\AsperienRanks.class
+asperienranks\asperienranks\Listener\OnQuit.class
+asperienranks\asperienranks\Commands\RankUp.class
+asperienranks\asperienranks\Commands\ForceRankUp.class
+asperienranks\asperienranks\Commands\Info.class
 asperienranks\asperienranks\Commands\Rank.class
 asperienranks\asperienranks\Listener\GUIMoveItem.class
