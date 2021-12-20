@@ -7,9 +7,9 @@ depend: [ Vault, Essentials ]
 authors: [ Lagggpixel ]
 description: AsperienRanks
 commands:
-  rank:
+  ranks:
     description: Opens a gui allowing you to rankup.
-    usage: /rank
+    usage: /ranks
     permission: asperienranks.default
     permission-message: You don't have premission to do this, please relog or contact a server admin
   rankup:

@@ -1,6 +1,6 @@
 package asperienranks.asperienranks.Manager;
 
-import asperienranks.asperienranks.Commands.Rank;
+import asperienranks.asperienranks.Commands.Ranks;
 import net.luckperms.api.LuckPerms;
 import net.luckperms.api.LuckPermsProvider;
 import net.luckperms.api.model.user.User;

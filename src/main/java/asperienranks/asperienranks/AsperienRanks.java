@@ -36,7 +36,7 @@ public final class AsperienRanks extends JavaPlugin {
     }
 
     public void RegisterCommands() {
-        this.getCommand("rank").setExecutor(new Rank());
+        this.getCommand("ranks").setExecutor(new Ranks());
         this.getCommand("forcerankup").setExecutor(new ForceRankUp());
         this.getCommand("info").setExecutor(new Info());
         this.getCommand("rankup").setExecutor(new RankUp());

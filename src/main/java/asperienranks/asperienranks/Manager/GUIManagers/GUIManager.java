@@ -31,8 +31,8 @@ public class GUIManager implements Listener {
 
         ItemStack[] menu_items = {
                 placeholder, placeholder, placeholder, placeholder, currentRank, placeholder, placeholder, placeholder, placeholder,
-                placeholder, MemberRank, MerchantRank, SoldierRank, EliteRank, LiegeRank, RoninRank, SamuraiRank, placeholder,
-                placeholder, DaimyoRank, ShogunRank, EmperorRank, Air, Air, Air, Air, placeholder,
+                placeholder, Air, MemberRank, MerchantRank, SoldierRank, EliteRank, LiegeRank, Air, placeholder,
+                placeholder, Air, RoninRank, SamuraiRank, DaimyoRank, ShogunRank, EmperorRank, Air, placeholder,
                 placeholder, placeholder, placeholder, placeholder, UpgradeRank, placeholder, placeholder, placeholder, placeholder
         };
 

@@ -74,7 +74,42 @@ public class ItemStackManager implements Listener {
     }
 
     public static ItemStack RankPaper(Player player, String RankString) {
-        ItemStack CurrentRank = new ItemStack(Material.PAPER);
+        ItemStack CurrentRank = null;
+
+        switch (RankString) {
+            case "emperor":
+                CurrentRank = new ItemStack(Material.AMETHYST_SHARD);
+                break;
+            case "shogun":
+                CurrentRank = new ItemStack(Material.NETHERITE_INGOT);
+                break;
+            case "daimyo":
+                CurrentRank = new ItemStack(Material.DIAMOND);
+                break;
+            case "samurai":
+                CurrentRank = new ItemStack(Material.EMERALD);
+                break;
+            case "ronin":
+                CurrentRank = new ItemStack(Material.LAPIS_LAZULI);
+                break;
+            case "liege":
+                CurrentRank = new ItemStack(Material.GOLD_INGOT);
+                break;
+            case "elite":
+                CurrentRank = new ItemStack(Material.IRON_INGOT);
+                break;
+            case "soldier":
+                CurrentRank = new ItemStack(Material.COPPER_INGOT);
+                break;
+            case "merchant":
+                CurrentRank = new ItemStack(Material.QUARTZ);
+                break;
+            case "member":
+                CurrentRank = new ItemStack(Material.COAL);
+                break;
+        }
+
+        assert CurrentRank != null;
         ItemMeta CurrentRankMeta = CurrentRank.getItemMeta();
 
         assert CurrentRankMeta != null;
@@ -92,76 +127,76 @@ public class ItemStackManager implements Listener {
 
         switch (RankString) {
             case "emperor":
-                CurrentRankLore.add(" - Everything in shogun");
-                CurrentRankLore.add(" - 8 Homes");
-                CurrentRankLore.add(" - 5 slots on ah");
-                CurrentRankLore.add(" - 6 Rows of backpack");
-                CurrentRankLore.add(" - Access to /fly");
-                CurrentRankLore.add(" - Access to /nick(colours)");
+                CurrentRankLore.add(" - All perks in Shogun Rank");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 8 homes");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 5 slots on ah");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 6 rows of backpack");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to /fly");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to /nick(colours)");
                 break;
             case "shogun":
-                CurrentRankLore.add(" - Everything in daimyo");
-                CurrentRankLore.add(" - Access to 4 slots of ah");
-                CurrentRankLore.add(" - Access to 5 Rows of backpack");
-                CurrentRankLore.add(" - Access to 4 jobs");
-                CurrentRankLore.add(" - Access to /ptime");
-                CurrentRankLore.add(" - Access to /speed");
+                CurrentRankLore.add(" - All perks in Daimyo Rank");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 4 slots of ah");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 5 Rows of backpack");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 4 jobs");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to /ptime");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to /speed");
                 break;
             case "daimyo":
-                CurrentRankLore.add(" - Everything in samurai");
-                CurrentRankLore.add(" - Access to 7 homes");
-                CurrentRankLore.add(" - Access to 4 rows of backpack");
-                CurrentRankLore.add(" - Access to reusable Safari Nets");
-                CurrentRankLore.add(" - Access to /tfly");
+                CurrentRankLore.add(" - All perks in Samurai Rank");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 7 homes");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 4 rows of backpack");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to reusable Safari Nets");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to /tfly");
                 break;
             case "samurai":
-                CurrentRankLore.add(" - Everything in ronin");
-                CurrentRankLore.add(" - Access to /condense");
-                CurrentRankLore.add(" - Access to /nick(colourless)");
-                CurrentRankLore.add(" - Access to /pweather");
-                CurrentRankLore.add(" - Access to /back on death");
-                CurrentRankLore.add(" - Access to /magnet");
+                CurrentRankLore.add(" - All perks in Ronin Rank");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to /condense");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to /nick(colourless)");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to /pweather");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to /back on death");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to /magnet");
                 break;
             case "ronin":
-                CurrentRankLore.add(" - Everything in liege");
-                CurrentRankLore.add(" - Access to 6 homes");
-                CurrentRankLore.add(" - Access to 3 jobs");
-                CurrentRankLore.add(" - Access to 3 slots on auction house");
-                CurrentRankLore.add(" - Access to 3 rows of backpack");
-                CurrentRankLore.add(" - Access to /craft");
+                CurrentRankLore.add( " - All perks in Liege Rank");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 6 homes");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 3 jobs");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 3 slots on auction house");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 3 rows of backpack");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to /craft");
                 break;
             case "liege":
-                CurrentRankLore.add(" - Everything in elite");
-                CurrentRankLore.add(" - Access to 5 homes");
-                CurrentRankLore.add(" - Access to 2 player warps");
-                CurrentRankLore.add(" - Access to /enderchest");
-                CurrentRankLore.add(" - Break spawners with silktouch");
+                CurrentRankLore.add(" - All perks in Elite Rank");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 5 homes");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 2 player warps");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to /enderchest");
+                CurrentRankLore.add(ChatColor.WHITE + " - Break spawners with silktouch");
                 break;
             case "elite":
-                CurrentRankLore.add(" - Everything in soldier");
-                CurrentRankLore.add(" - Access to 4 homes");
-                CurrentRankLore.add(" - Access to 2 rows of backpack");
-                CurrentRankLore.add(" - Access to 2 slots on auction house");
-                CurrentRankLore.add(" - Access to single use Safari Nets");
-                CurrentRankLore.add(" - Access to xp bottler");
-                CurrentRankLore.add(" - Access to /heads");
+                CurrentRankLore.add(" - All perks in Soldier Rank");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 4 homes");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 2 rows of backpack");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 2 slots on auction house");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to single use Safari Nets");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to xp bottler");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to /heads");
                 break;
             case "soldier":
-                CurrentRankLore.add(" - Everything in merchant");
-                CurrentRankLore.add(" - Access to 3 homes");
-                CurrentRankLore.add(" - Access to 2 jobs");
-                CurrentRankLore.add(" - Access to /back");
-                CurrentRankLore.add(" - Access to make a town");
+                CurrentRankLore.add(" - All perks in Merchant Rank");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 3 homes");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 2 jobs");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to /back");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to make a town");
                 break;
             case "merchant":
-                CurrentRankLore.add(" - Everything in member");
-                CurrentRankLore.add(" - Access to /trash");
-                CurrentRankLore.add(" - Access to 1 row of backpack");
-                CurrentRankLore.add(" - Access to 1 player warp");
+                CurrentRankLore.add(" - All perks in Member Rank");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to /trash");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 1 row of backpack");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 1 player warp");
                 break;
             case "member":
-                CurrentRankLore.add(" - Access to 2 homes");
-                CurrentRankLore.add(" - Access to 1 slot on auction house");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 2 homes");
+                CurrentRankLore.add(ChatColor.WHITE + " - Access to 1 slot on auction house");
                 break;
         }
 
