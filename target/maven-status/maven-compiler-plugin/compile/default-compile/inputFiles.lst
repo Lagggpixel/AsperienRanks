@@ -1,10 +1,10 @@
 D:\Minecraft\Plugins\AsperienRanks\AsperienRanks\src\main\java\asperienranks\asperienranks\Listener\GUIMoveItem.java
 D:\Minecraft\Plugins\AsperienRanks\AsperienRanks\src\main\java\asperienranks\asperienranks\Listener\OnQuit.java
 D:\Minecraft\Plugins\AsperienRanks\AsperienRanks\src\main\java\asperienranks\asperienranks\Listener\OnJoin.java
-D:\Minecraft\Plugins\AsperienRanks\AsperienRanks\src\main\java\asperienranks\asperienranks\Commands\Rank.java
 D:\Minecraft\Plugins\AsperienRanks\AsperienRanks\src\main\java\asperienranks\asperienranks\Manager\GUIManagers\GUIManager.java
 D:\Minecraft\Plugins\AsperienRanks\AsperienRanks\src\main\java\asperienranks\asperienranks\Manager\GUIManagers\ItemStackManager.java
 D:\Minecraft\Plugins\AsperienRanks\AsperienRanks\src\main\java\asperienranks\asperienranks\AsperienRanks.java
+D:\Minecraft\Plugins\AsperienRanks\AsperienRanks\src\main\java\asperienranks\asperienranks\Commands\Ranks.java
 D:\Minecraft\Plugins\AsperienRanks\AsperienRanks\src\main\java\asperienranks\asperienranks\Manager\RankManager.java
 D:\Minecraft\Plugins\AsperienRanks\AsperienRanks\src\main\java\asperienranks\asperienranks\Commands\Info.java
 D:\Minecraft\Plugins\AsperienRanks\AsperienRanks\src\main\java\asperienranks\asperienranks\Commands\ForceRankUp.java
