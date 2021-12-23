@@ -24,7 +24,7 @@ public class GUIMoveItem implements Listener {
         Player player = (Player) event.getWhoClicked();
         if(event.getView().getTitle().equalsIgnoreCase(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Asperien Ranks")){
             event.setCancelled(true);
-            if (event.getCurrentItem().getType().equals(Material.DIAMOND)) {
+            if (event.getCurrentItem().getType().equals(Material.NETHER_STAR)) {
                 player.closeInventory();
                 GUIManager.ConfirmGUI(player);
             }

@@ -217,7 +217,7 @@ public class ItemStackManager implements Listener {
     }
 
     public static ItemStack UpgradeRank(Player player) {
-        ItemStack UpgradeRank = new ItemStack(Material.DIAMOND);
+        ItemStack UpgradeRank = new ItemStack(Material.NETHER_STAR);
         ItemMeta UpgradeRankMeta = UpgradeRank.getItemMeta();
 
         ArrayList<String> UpgradeRankLore = new ArrayList<String>();
